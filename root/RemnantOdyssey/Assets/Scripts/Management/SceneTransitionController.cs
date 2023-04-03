@@ -6,66 +6,70 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-[System.Serializable]
-public struct transitions
+
+public struct PlayerAbilities
 {
-    [SerializeField] public string sceneName;
-    [SerializeField] public string sceneDescription;
-    [SerializeField] public Image transitionImage;
+    public bool canMove;
+    //public bool canPlay;
+    //public bool canPause;
 }
 
 public class SceneTransitionController : MonoBehaviour
 {
-    [SerializeField] private string[] sceneNames;
-    [SerializeField] private string currentScene;
-    [SerializeField] private bool isLoadingNextScene;
-    [SerializeField] private List<transitions> transitionData;
-    private Dictionary<string, transitions> transitionDictionary;
+    #region Variables
+    [Header("Scene Transition Scriptable Object")]
+    [SerializeField] SO_SceenTrans screenTransObject;
 
-    //the actual transition canvas
+    [Header("Scene Status")]
+    [SerializeField] private string currentScene;
+    [Tooltip("If true, the next scene is currently being loaded.")]
+    [SerializeField] private bool isLoadingNextScene;
+    [Space]
+
+    [Header("Transition UI Elements")]
+    // The actual transition canvas
     [SerializeField] Slider progressBar;
     [SerializeField] GameObject loadingCanvas;
+    [Tooltip("The name of the scene that is currently being loaded.")]
     [SerializeField] TextMeshProUGUI visibleSceneName;
+    [Tooltip("A brief description of the scene that is currently being loaded.")]
     [SerializeField] TextMeshProUGUI visibleSceneDescription;
+    [Tooltip("An image that represents the transition between scenes.")]
     [SerializeField] Image visibleTransitionImage;
+    #endregion
 
     //sets up the dictionary
     private void Awake()
     {
-        //set the dictionary full of structs
-        for (int i = 0; i < sceneNames.Length; i++)
-        {
-            transitionDictionary.Add(sceneNames[i], transitionData[i]);
-        }
-
-        //to confirm every soundname has a file
-
-        foreach (var pair in transitionDictionary)
-        {
-            Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-        }
+        screenTransObject.InitialiseTransitionDictionary();
+        //for testing purposes
+        LoadScene("The Lab");
+        //the real method to set up everything
+        currentScene = SceneManager.GetActiveScene().name;
     }
-
     public void LoadScene(string selectedSceneName)
     {
-        transitions chosenScene;
-        if (transitionDictionary.TryGetValue(selectedSceneName, out chosenScene))
+        Transitions chosenScene;
+        if (screenTransObject.transitionDictionary.TryGetValue(selectedSceneName, out chosenScene))
         {
             //set active the loading panel
             loadingCanvas.SetActive(true);
             //display the bar and the text
             visibleSceneName.text = chosenScene.sceneName;
             visibleSceneDescription.text = chosenScene.sceneDescription;
-            visibleTransitionImage = chosenScene.transitionImage;
+            //visibleTransitionImage.sprite = chosenScene.transitionImage.sprite;
+
             //start the coroutine
             StartCoroutine(LoadSceneAsync(selectedSceneName));
+            isLoadingNextScene = true;
+            
             //now, take data fron chosenscene and populate the UI
 
             Debug.Log($"scene loading sucessfully");
         }
         else
         {
-            Debug.LogWarning("Scene " + chosenScene + " was not found");
+            Debug.LogWarning("Scene " + selectedSceneName + " was not found");
         }
     }
     public void ReturnToMainMenu()
