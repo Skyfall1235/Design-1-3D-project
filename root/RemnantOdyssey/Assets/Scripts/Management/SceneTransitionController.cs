@@ -1,18 +1,9 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-
-public struct PlayerAbilities
-{
-    public bool canMove;
-    //public bool canPlay;
-    //public bool canPause;
-}
 
 public class SceneTransitionController : MonoBehaviour
 {

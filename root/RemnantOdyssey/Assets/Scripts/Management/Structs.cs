@@ -11,3 +11,15 @@ public struct Transitions
     [SerializeField] public string sceneDescription;
     [SerializeField] public Image transitionImage;
 }
+
+
+[System.Serializable]
+public struct MiniMapInfo
+{
+    //do not use this scene name
+    [SerializeField] public string mapName;
+    [SerializeField] public Image baseMap;
+    [SerializeField] public List<Image> mapCover;
+    [SerializeField] public List<Image> questMarker;
+    [SerializeField] public List<Image> itemMarker;
+}

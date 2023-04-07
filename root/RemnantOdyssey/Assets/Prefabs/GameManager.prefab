@@ -1,5 +1,106 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6367517861914307808
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1321974590091769561}
+  - component: {fileID: 240701151848457354}
+  - component: {fileID: 5385584417603691022}
+  - component: {fileID: 6731648627888124369}
+  m_Layer: 0
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1321974590091769561
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367517861914307808}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7810953356766172845}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!223 &240701151848457354
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367517861914307808}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &5385584417603691022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367517861914307808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &6731648627888124369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6367517861914307808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &7810953356766172840
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5033794208853904467}
+  - {fileID: 1321974590091769561}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -68,22 +170,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ffc590e812560f4d9b83dacd4e3e7e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNames:
-  - The Lab
-  - The Green City
-  - the HyperRail
+  screenTransObject: {fileID: 0}
   currentScene: 
   isLoadingNextScene: 0
-  transitionData:
-  - sceneName: The Lab
-    sceneDescription: A desolate place, trashed from a cause yet known...
-    transitionImage: {fileID: 0}
-  - sceneName: The Green City
-    sceneDescription: add some descption here
-    transitionImage: {fileID: 0}
-  - sceneName: The Hyper rail
-    sceneDescription: add some descption here
-    transitionImage: {fileID: 0}
   progressBar: {fileID: 1100508317891845654}
   loadingCanvas: {fileID: 6511955941864266440}
   visibleSceneName: {fileID: 5242578885240348817}
@@ -207,15 +296,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3810869700103336057, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188083717620067717, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188083717620067717, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188083717620067717, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.548
+      objectReference: {fileID: 0}
     - target: {fileID: 8033684010518481100, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.548
       objectReference: {fileID: 0}
     - target: {fileID: 8033684010518481100, guid: d0da8b8a45ee26c45bc8ca51c22850d6,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
