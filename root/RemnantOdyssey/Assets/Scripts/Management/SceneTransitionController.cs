@@ -34,7 +34,7 @@ public class SceneTransitionController : MonoBehaviour
     {
         screenTransObject.InitialiseTransitionDictionary();
         //for testing purposes
-        LoadScene("The Lab");
+        //LoadScene("The Lab");
         //the real method to set up everything
         currentScene = SceneManager.GetActiveScene().name;
     }
@@ -80,6 +80,7 @@ public class SceneTransitionController : MonoBehaviour
             progressBar.value = progressValue;
             yield return null;
         }
+        loadingCanvas.SetActive(false);
     }
 
 
