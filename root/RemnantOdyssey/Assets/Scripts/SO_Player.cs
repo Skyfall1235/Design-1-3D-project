@@ -10,9 +10,12 @@ public class SO_Player : ScriptableObject
 
     //what minimap peices are unlocked
 
-    //what abilitwsthey have unlocked
+    //what abilities sthey have unlocked
 
     //current HP
+    public int playerHealth;
 
     //if a player has energy?
+
+    //the players position
 }

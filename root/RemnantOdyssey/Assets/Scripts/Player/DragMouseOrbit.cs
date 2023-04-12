@@ -3,19 +3,21 @@
 [AddComponentMenu("Camera-Control/Mouse drag Orbit with zoom")]
 public class DragMouseOrbit : MonoBehaviour
 {
-    public Transform Target;
-    public float Distance = 5.0f;
-    public float XSpeed = 10.0f;
-    public float YSpeed = 10.0f;
-    public float YMinLimit = -20f;
-    public float YMaxLimit = 80f;
-    public float DistanceMin = 1f;
-    public float DistanceMax = 15f;
-    public float SmoothTime = 2f;
-    float rotationYAxis;
-    float rotationXAxis;
-    float velocityX;
-    float velocityY;
+    [SerializeField] private Transform Target;
+    [SerializeField] private float distanceFromTarget = 5.0f;
+    [SerializeField] private float horizontalOffset = 0f;
+    [SerializeField] private float verticalOffset = 0f;
+    [SerializeField] private float XSpeed = 10.0f;
+    [SerializeField] private float YSpeed = 10.0f;
+    [SerializeField] private float YMinLimit = -20f;
+    [SerializeField] private float YMaxLimit = 80f;
+    [SerializeField] private float distanceMin = 1f;
+    [SerializeField] private float distanceMax = 15f;
+    [SerializeField] private float SmoothTime = 2f;
+    private float rotationYAxis;
+    private float rotationXAxis;
+    private float velocityX;
+    private float velocityY;
 
     void Start()
     {
@@ -34,8 +36,8 @@ public class DragMouseOrbit : MonoBehaviour
         rotationXAxis = ClampAngle(rotationXAxis, YMinLimit, YMaxLimit);
         var rotation = Quaternion.Euler(rotationXAxis, rotationYAxis, 0);
 
-        Distance = Mathf.Clamp(Distance - Input.GetAxis("Mouse ScrollWheel") * 5f, DistanceMin, DistanceMax);
-        var negDistance = new Vector3(0.0f, 0.0f, -Distance);
+        distanceFromTarget = Mathf.Clamp(distanceFromTarget - Input.GetAxis("Mouse ScrollWheel") * 5f, distanceMin, distanceMax);
+        var negDistance = new Vector3(-horizontalOffset, -verticalOffset, -distanceFromTarget);
         var position = rotation * negDistance + Target.position;
 
         transform.rotation = rotation;

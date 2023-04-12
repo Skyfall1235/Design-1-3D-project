@@ -32,9 +32,9 @@ public class SceneTransitionController : MonoBehaviour
     //sets up the dictionary
     private void Awake()
     {
+        //the call below stores the dictionary of the
         screenTransObject.InitialiseTransitionDictionary();
-        //for testing purposes
-        //LoadScene("The Lab");
+
         //the real method to set up everything
         currentScene = SceneManager.GetActiveScene().name;
     }
@@ -68,7 +68,7 @@ public class SceneTransitionController : MonoBehaviour
         //get current scene, open up next transisition, and begin async unload and then async load
     }
 
-
+    //coroutine to handle transition
     private IEnumerator LoadSceneAsync(string sceneName)
     {
 
@@ -82,12 +82,4 @@ public class SceneTransitionController : MonoBehaviour
         }
         loadingCanvas.SetActive(false);
     }
-
-
-    //coroutine to handle transition
-    //display an image, maybe gif, handle a loading bar or spinner, name level, and some flavor text
-
-    //the order
-    //display gif, unload previous scene, (show canvas with name level, and flavor text), load new scene, once done destroy canvas
-
 }

@@ -12,6 +12,7 @@ public class SO_SceenTrans : ScriptableObject
 
     public Dictionary<string, Transitions> transitionDictionary = new Dictionary<string, Transitions>();
 
+    //public string CurrentSceneData
     // Move the code that sets the dictionary to a method or constructor
     public void InitialiseTransitionDictionary()
     {
