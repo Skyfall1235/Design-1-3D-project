@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Temp Functionality
 
 public class SoundManager : MonoBehaviour
 {
     //sound name to
+    [SerializeField] private AudioSource audiosource; // Temp Functionality
     [SerializeField] private List<string> soundName;
     [SerializeField] private List<AudioClip> soundFile;
     private Dictionary<string, AudioClip> sound = new Dictionary<string, AudioClip>();
@@ -52,9 +54,24 @@ public class SoundManager : MonoBehaviour
 
     //trigger animation with sound
 
+    // Temp Functionality
+    void Start()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlaySoundAtLocation("Main_Menu_Music", audiosource);
+        }
+    }
 
+    public void OnMenuButtonClick()
+    {
+        PlaySoundAtLocation("Main_Menu_Button", audiosource);
+    }
 
-
+    public void OnMenuButtonHighlight()
+    {
+        PlaySoundAtLocation("Main_Menu_Highlight", audiosource);
+    }
 
 
 }
