@@ -23,3 +23,11 @@ MonoBehaviour:
     - {fileID: 0}
     itemMarker:
     - {fileID: 0}
+  - mapName: The Lab
+    baseMap: {fileID: 0}
+    mapCover:
+    - {fileID: 0}
+    questMarker:
+    - {fileID: 0}
+    itemMarker:
+    - {fileID: 0}
