@@ -11,6 +11,8 @@ public class SceneTransitionController : MonoBehaviour
     [Header("Scene Transition Scriptable Object")]
     [SerializeField] SO_SceenTrans screenTransObject;
 
+    [SerializeField] SO_Player playerData;
+
     [Header("Scene Status")]
     [SerializeField] private string currentScene;
     [Tooltip("If true, the next scene is currently being loaded.")]
@@ -37,6 +39,7 @@ public class SceneTransitionController : MonoBehaviour
 
         //the real method to set up everything
         currentScene = SceneManager.GetActiveScene().name;
+        playerData.currentLevel = currentScene;
     }
     public void LoadScene(string selectedSceneName)
     {

@@ -49,29 +49,32 @@ public class FullMapController : MonoBehaviour
     private void MoveMap()
     {
         Vector2 directionFromCenter = DirectionFromCenter().normalized;
-        Vector2 position = rectTransformOfMap.anchoredPosition;
+        Vector2 position = transform.position;
 
 
 
         // Check if the camera is within the deadzone
         if (DistanceFromCenter() < deadzoneRadius)
         {
+            Debug.Log("too close to the deadzone");
             return;
         }
         if (DetermineIfPanelIsTooFar())
         {
+            Debug.Log("panel is too far");
             return;
         }
 
 
         // Calculate the distance to move the panel
         float distance = directionFromCenter.magnitude * Time.deltaTime * 1000f;
+        Debug.Log(distance);
 
         // Move the panel in the opposite direction of the mouse
         position -= directionFromCenter * distance;
 
         // Set the position of the panel
-        rectTransformOfMap.anchoredPosition = position;
+        map.transform.position = position;
     }
 
     private void AdjustZoomLevel()
@@ -132,6 +135,8 @@ public class FullMapController : MonoBehaviour
         float maxX = canvasSize.x / 2f;
         float minY = -canvasSize.y / 2f;
         float maxY = canvasSize.y / 2f;
+        Debug.Log($"{objPosition.x} {minX} {objPosition.x} {maxX} {objPosition.y} {minY} {objPosition.y} {maxY}");
+        Debug.Log($"{objPosition.x < minX} {objPosition.x > maxX} {objPosition.y < minY} {objPosition.y > maxY}");
 
         if (objPosition.x < minX || objPosition.x > maxX || objPosition.y < minY || objPosition.y > maxY)
         {

@@ -21,6 +21,8 @@ public class UIMenuControl : MonoBehaviour
 
     private void Update()
     {
+        //WHEN YOU PRESS A KEY, TURN OFF THE ABILITY TO MOVE OR USE THE CAMERA
+
         if (Input.GetKeyDown(mapKey))
         {
             // Toggle the bool

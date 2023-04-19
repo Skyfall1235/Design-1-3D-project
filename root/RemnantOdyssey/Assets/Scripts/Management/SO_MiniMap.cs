@@ -21,9 +21,9 @@ public class SO_MiniMap : ScriptableObject
             miniMapDictionary.Add(miniMapNames[i], mapData[i]);
         }
         //for debugging
-        foreach (var pair in miniMapDictionary)
-        {
-            Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-        }
+        //foreach (var pair in miniMapDictionary)
+        //{
+        //    Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+        //}
     }
 }

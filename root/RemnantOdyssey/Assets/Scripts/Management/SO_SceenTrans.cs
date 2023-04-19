@@ -22,10 +22,10 @@ public class SO_SceenTrans : ScriptableObject
             Debug.Log(transitionData[i]);
             transitionDictionary.Add(sceneNames[i], transitionData[i]);
         }
-        //for debugging
-        foreach (var pair in transitionDictionary)
-        {
-            Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
-        }
+        ////for debugging
+        //foreach (var pair in transitionDictionary)
+        //{
+        //    Console.WriteLine("{0}: {1}", pair.Key, pair.Value);
+        //}
     }
 }

@@ -20,6 +20,7 @@ public struct MiniMapInfo
     [SerializeField] public string mapName;
     [SerializeField] public Image baseMap;
     [SerializeField] public List<Image> mapCover;
+    [SerializeField] public List<bool> mapCoverDisplayed;
     [SerializeField] public List<Image> questMarker;
     [SerializeField] public List<Image> itemMarker;
 }
