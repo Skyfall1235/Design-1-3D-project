@@ -7,8 +7,8 @@ public class SoundManager : MonoBehaviour
 {
     //sound name to
     [SerializeField] private List<string> soundName;
-    [SerializeField] private List<AudioClip> soundFile;
-    private Dictionary<string, AudioClip> sound = new Dictionary<string, AudioClip>();
+    [SerializeField] private List<Sounds> soundFiles;
+    private Dictionary<string, Sounds> sound = new Dictionary<string, Sounds>();
 
 
 
@@ -23,7 +23,7 @@ public class SoundManager : MonoBehaviour
     {
         for (int i = 0; i < soundName.Count; i++)
         {
-            sound.Add(soundName[i], soundFile[i]);
+            sound.Add(soundName[i], soundFiles[i]);
         }
 
         //to confirm every soundname has a file
@@ -35,10 +35,11 @@ public class SoundManager : MonoBehaviour
     }
 
     //play sound, at sound location
-    public void PlaySoundAtLocation(string soundName, AudioSource source)
+    public void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source)
     {
+        Sounds chosenStruct;
         AudioClip chosenSound;
-        if (sound.TryGetValue(soundName, out chosenSound))
+        if (sound.TryGetValue(soundName, out chosenStruct))
         {
             source.PlayOneShot(chosenSound);
             Debug.Log($"Sound {soundName} played successfully");

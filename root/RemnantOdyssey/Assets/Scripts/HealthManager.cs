@@ -31,4 +31,8 @@ public class HealthManager
         int product = (int) (charData.HealthMax * healEquation);
         return product;
     }
+    public void Shock()
+    {
+        //needs to turn off the movement of the character, mayby activate some triggers for animtation/material changes, and do other stuff
+    }
 }

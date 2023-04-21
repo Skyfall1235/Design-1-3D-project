@@ -24,3 +24,7 @@ public struct MiniMapInfo
     [SerializeField] public List<Image> questMarker;
     [SerializeField] public List<Image> itemMarker;
 }
+public struct Sounds
+{
+    [SerializeField] private List<AudioClip> soundFile;
+}
