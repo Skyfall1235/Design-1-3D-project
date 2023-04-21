@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Temp Functionality
 
 public class SoundManager : MonoBehaviour
 {
@@ -27,4 +28,28 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("Sound " + soundName + "was not found in dictionary 'sounds'");
         }
     }
+
+
+    //trigger animation with sound
+
+    // Temp Functionality
+    void Start()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlaySoundAtLocation("Main_Menu_Music", audiosource);
+        }
+    }
+
+    public void OnMenuButtonClick()
+    {
+        PlaySoundAtLocation("Main_Menu_Button", audiosource);
+    }
+
+    public void OnMenuButtonHighlight()
+    {
+        PlaySoundAtLocation("Main_Menu_Highlight", audiosource);
+    }
+
+
 }
