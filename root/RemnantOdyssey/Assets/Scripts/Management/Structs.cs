@@ -26,5 +26,5 @@ public struct MiniMapInfo
 }
 public struct Sounds
 {
-    [SerializeField] private List<AudioClip> soundFile;
+    [SerializeField] public List<AudioClip> soundFile;
 }
