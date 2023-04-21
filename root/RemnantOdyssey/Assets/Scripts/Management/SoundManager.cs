@@ -28,28 +28,11 @@ public class SoundManager : MonoBehaviour
             Debug.LogWarning("Sound " + soundName + "was not found in dictionary 'sounds'");
         }
     }
+    //find the gameobject, then get the component Soundamanger, then use the method PlaySoundAtLocation(name, index, source)
 
 
     //trigger animation with sound
 
     // Temp Functionality
-    void Start()
-    {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            PlaySoundAtLocation("Main_Menu_Music", audiosource);
-        }
-    }
-
-    public void OnMenuButtonClick()
-    {
-        PlaySoundAtLocation("Main_Menu_Button", audiosource);
-    }
-
-    public void OnMenuButtonHighlight()
-    {
-        PlaySoundAtLocation("Main_Menu_Highlight", audiosource);
-    }
-
 
 }

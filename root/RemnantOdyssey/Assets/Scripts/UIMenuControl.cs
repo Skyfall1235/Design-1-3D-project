@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using static Unity.VisualScripting.Member;
 using static UnityEngine.Rendering.DebugUI;
 
 public class UIMenuControl : MonoBehaviour
@@ -42,7 +44,28 @@ public class UIMenuControl : MonoBehaviour
             InteractionMenu(interactionMenuOpen);
         }
     }
+    #region Menu UI
+    void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            //GlobalMethods.PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source);
+            //PlaySoundAtLocation("Main_Menu_Music", audiosource);
+        }
+    }
 
+    public void OnMenuButtonClick()
+    {
+        //PlaySoundAtLocation("Main_Menu_Button", audiosource);
+    }
+
+    public void OnMenuButtonHighlight()
+    {
+        //PlaySoundAtLocation("Main_Menu_Highlight", audiosource);
+    }
+    #endregion
+
+    #region Hud interaction
     // Control the toggle and allow interaction with the menu
     private void Map(bool toggle)
     {
@@ -84,4 +107,5 @@ public class UIMenuControl : MonoBehaviour
 
         }
     }
+    #endregion
 }

@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 663aeb4a5dc9c1148b9ab1d57a1cb5e1, type: 3}
   m_Name: MiniMap Data
   m_EditorClassIdentifier: 
-  miniMapNames:
-  - The Lab
   mapData:
   - mapName: The Lab
     baseMap: {fileID: 0}
     mapCover:
     - {fileID: 0}
+    mapCoverDisplayed: 00
     questMarker:
     - {fileID: 0}
     itemMarker:
@@ -27,6 +26,16 @@ MonoBehaviour:
     baseMap: {fileID: 0}
     mapCover:
     - {fileID: 0}
+    mapCoverDisplayed: 
+    questMarker:
+    - {fileID: 0}
+    itemMarker:
+    - {fileID: 0}
+  - mapName: The Lab
+    baseMap: {fileID: 0}
+    mapCover:
+    - {fileID: 0}
+    mapCoverDisplayed: 
     questMarker:
     - {fileID: 0}
     itemMarker:

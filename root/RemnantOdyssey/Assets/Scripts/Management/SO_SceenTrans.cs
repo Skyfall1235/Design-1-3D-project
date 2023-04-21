@@ -7,7 +7,6 @@ using UnityEngine;
 [System.Serializable]
 public class SO_SceenTrans : ScriptableObject
 {
-    [SerializeField] private string[] sceneNames;
     [SerializeField] private List<Transitions> transitionData = new List<Transitions>();
 
     public Dictionary<string, Transitions> transitionDictionary = new Dictionary<string, Transitions>();
@@ -16,11 +15,11 @@ public class SO_SceenTrans : ScriptableObject
     // Move the code that sets the dictionary to a method or constructor
     public void InitialiseTransitionDictionary()
     {
-        for (int i = 0; i < sceneNames.Length; i++)
+        for (int i = 0; i < transitionData.Count; i++)
         {
-            Debug.Log(sceneNames[i]);
+            Debug.Log(transitionData[i].sceneName);
             Debug.Log(transitionData[i]);
-            transitionDictionary.Add(sceneNames[i], transitionData[i]);
+            transitionDictionary.Add(transitionData[i].sceneName, transitionData[i]);
         }
         ////for debugging
         //foreach (var pair in transitionDictionary)

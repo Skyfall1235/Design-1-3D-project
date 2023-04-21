@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,11 +30,14 @@ public static class GlobalMethods
         if (gameManager != null)
         {
             // Get the SoundManager component attached to the GameManager object
-            return gameManager.GetComponent<SoundManager>();
-
-            if (soundManager == null)
+            try
             {
-                Debug.LogWarning("Could not find SoundManager component on GameManager.");
+                return gameManager.GetComponent<SoundManager>();
+            }
+            catch (Exception ex)
+            {
+                //i think i nedd to use a try/catch here?
+                Debug.LogError("Could not find SoundManager component on GameManager." + ex.Message + " StackTrace: " + ex.StackTrace);
                 return null;
             }
         }

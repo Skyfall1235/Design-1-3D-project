@@ -7,17 +7,17 @@ using UnityEngine;
 [System.Serializable]
 public class SO_AudioFiles : ScriptableObject
 {
-    [SerializeField] private string[] soundName;
     [SerializeField] private List<Sounds> soundFiles = new List<Sounds>();
+
     public Dictionary<string, Sounds> sound = new Dictionary<string, Sounds>();
 
 
     //sets up the dictionary
     public void SetUpDictionary()
     {
-        for (int i = 0; i < soundName.Length; i++)
+        for (int i = 0; i < soundFiles.Count; i++)
         {
-            sound.Add(soundName[i], soundFiles[i]);
+            sound.Add(soundFiles[i].collectionName, soundFiles[i]);
         }
 
         //to confirm every soundname has a file

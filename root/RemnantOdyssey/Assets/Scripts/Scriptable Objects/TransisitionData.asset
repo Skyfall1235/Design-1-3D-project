@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7fd7b88db5d204d8e289f81152406b, type: 3}
   m_Name: TransisitionData
   m_EditorClassIdentifier: 
-  sceneNames:
-  - The Lab
-  - fill me out later
-  - The HyperRail
   transitionData:
   - sceneName: The Lab
     sceneDescription: something ominous happened here
     transitionImage: {fileID: 0}
   - sceneName: fill out later
     sceneDescription: fill me out later
+    transitionImage: {fileID: 0}
+  - sceneName: The HyperRail
+    sceneDescription: describe it be be omninous
     transitionImage: {fileID: 0}
   - sceneName: The HyperRail
     sceneDescription: describe it be be omninous
