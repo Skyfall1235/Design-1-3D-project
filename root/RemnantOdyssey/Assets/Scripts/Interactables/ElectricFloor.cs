@@ -15,6 +15,7 @@ public class ElectricFloor : MonoBehaviour
     //animator, sounds, the trigger/ collider(covered by the attached object), the toggle bool
 
     [SerializeField] bool toggleActivity; //true means its on
+    [SerializeField] int damageToPlayer;
     [Space]
     [Header("Particle & Audio")]
     [SerializeField] AudioSource objectSoundSource;
@@ -65,6 +66,9 @@ public class ElectricFloor : MonoBehaviour
         }
         yield return null;
     }
+
+    
+
     bool triggerControl = false;
     private void OnTriggerEnter(Collider other)
     {

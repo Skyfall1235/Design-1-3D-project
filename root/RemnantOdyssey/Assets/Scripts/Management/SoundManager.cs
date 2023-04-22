@@ -13,14 +13,14 @@ public class SoundManager : MonoBehaviour
         audioFiles.SetUpDictionary();
     }
     //play sound, at sound location
-    public void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source)
+    public void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source, float volume)
     {
         Sounds chosenStruct;
         AudioClip chosenSound;
         if (audioFiles.sound.TryGetValue(soundName, out chosenStruct))
         {
             chosenSound = chosenStruct.soundFile[indexLocation];
-            source.PlayOneShot(chosenSound);
+            source.PlayOneShot(chosenSound, volume);
             Debug.Log($"Sound {soundName} played successfully");
         }
         else

@@ -22,16 +22,16 @@ public class HealthManager
     }
 
     //ability to heal
-    private int CalculateHeal(SO_Character charData, int HealPercent)
+    private int CalculateHeal(SO_Character CharData, int HealPercent)
     {
         //for debugging
-        int damageTaken = charData.HealthMax - charData.Health;
+        int damageTaken = CharData.HealthMax - CharData.Health;
         //actual heal calculations. i hope the typecasting works
         float healEquation = HealPercent / 100;
-        int product = (int) (charData.HealthMax * healEquation);
+        int product = (int) (CharData.HealthMax * healEquation);
         return product;
     }
-    public void Shock()
+    public void Shock(int ShockDuration, int ShockDamage)
     {
         //needs to turn off the movement of the character, mayby activate some triggers for animtation/material changes, and do other stuff
     }

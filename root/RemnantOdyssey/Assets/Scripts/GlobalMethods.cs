@@ -5,13 +5,13 @@ using UnityEngine;
 
 public static class GlobalMethods
 {
-    public static void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source)
+    public static void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source, float volume)
     {
         SoundManager soundManager = FindSoundManager();
         if (soundManager != null)
         {
             // Call the PlaySoundAtLocation method on the SoundManager component
-            soundManager.PlaySoundAtLocation(soundName, indexLocation, source);
+            soundManager.PlaySoundAtLocation(soundName, indexLocation, source, volume);
         }
         else
         {
