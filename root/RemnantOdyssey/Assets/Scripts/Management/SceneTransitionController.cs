@@ -39,7 +39,7 @@ public class SceneTransitionController : MonoBehaviour
 
         //the real method to set up everything
         currentScene = SceneManager.GetActiveScene().name;
-        playerData.currentLevel = currentScene;
+        //playerData.currentLevel = currentScene;
     }
     public void LoadScene(string selectedSceneName)
     {
@@ -48,7 +48,7 @@ public class SceneTransitionController : MonoBehaviour
         {
             //set active the loading panel
             loadingCanvas.SetActive(true);
-            GlobalMethods.PlaySoundAtLocation("loading scene", 2, gameObject.GetComponent<AudioSource>(), 1);
+            GlobalMethods.PlaySoundAtLocation(SoundType.Music, "loading scene", 2, gameObject.GetComponent<AudioSource>(), 1);
             //display the bar and the text
             visibleSceneName.text = chosenScene.sceneName;
             visibleSceneDescription.text = chosenScene.sceneDescription;

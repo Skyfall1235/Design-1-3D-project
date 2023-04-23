@@ -16,6 +16,7 @@ public class ElectricFloor : MonoBehaviour
 
     [SerializeField] bool toggleActivity; //true means its on
     [SerializeField] int damageToPlayer;
+    [SerializeField] int shockDuration;
     [Space]
     [Header("Particle & Audio")]
     [SerializeField] AudioSource objectSoundSource;
@@ -74,7 +75,7 @@ public class ElectricFloor : MonoBehaviour
     {
         if(triggerControl)
         {
-            other.gameObject.GetComponent<HealthManager>().Shock();
+            other.gameObject.GetComponent<HealthManager>().Shock(shockDuration, damageToPlayer);
         }
         //else just do nothing
     }

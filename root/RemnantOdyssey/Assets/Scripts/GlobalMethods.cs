@@ -5,13 +5,13 @@ using UnityEngine;
 
 public static class GlobalMethods
 {
-    public static void PlaySoundAtLocation(string soundName, int indexLocation, AudioSource source, float volume)
+    public static void PlaySoundAtLocation(SoundType type, string soundName, int indexLocation, AudioSource source, float rawVolume)
     {
         SoundManager soundManager = FindSoundManager();
         if (soundManager != null)
         {
             // Call the PlaySoundAtLocation method on the SoundManager component
-            soundManager.PlaySoundAtLocation(soundName, indexLocation, source, volume);
+            soundManager.PlaySoundAtLocation(type, soundName, indexLocation, source, rawVolume);
         }
         else
         {
@@ -24,8 +24,6 @@ public static class GlobalMethods
     {
         // Find the GameManager object in the scene
         GameObject gameManager = GameObject.Find("GameManager");
-        //for storing the soundmanager
-        SoundManager soundManager;
 
         if (gameManager != null)
         {
