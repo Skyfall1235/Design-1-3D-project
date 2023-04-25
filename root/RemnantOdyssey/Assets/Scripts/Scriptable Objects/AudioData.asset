@@ -16,17 +16,20 @@ MonoBehaviour:
   - collectionName: Menu Music
     soundFile:
     - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
+    - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
+    - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
+  - collectionName: UI FX
+    soundFile:
+    - {fileID: 8300000, guid: 3cd5e833d3820c045af0995c3cf381dc, type: 3}
+    - {fileID: 8300000, guid: 45ffffc5bd6aea24aa82bd8eea5642c6, type: 3}
+  - collectionName: Player FX
+    soundFile:
     - {fileID: 0}
   - collectionName: Game Music
     soundFile:
     - {fileID: 0}
-    - {fileID: 0}
-  - collectionName: UI Sound Effects
+  - collectionName: Ambience
     soundFile:
-    - {fileID: 8300000, guid: 3cd5e833d3820c045af0995c3cf381dc, type: 3}
-    - {fileID: 8300000, guid: 45ffffc5bd6aea24aa82bd8eea5642c6, type: 3}
     - {fileID: 0}
-  - collectionName: Player
-    soundFile: []
-  - collectionName: Music
+  - collectionName: extra
     soundFile: []

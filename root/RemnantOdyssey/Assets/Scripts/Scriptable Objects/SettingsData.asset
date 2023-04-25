@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b864c1af4f5f4443a3f3886dabd9db6, type: 3}
   m_Name: SettingsData
   m_EditorClassIdentifier: 
-  musicVolume: 0
-  soundEffectVolume: 0
+  musicVolume: 1
+  soundEffectVolume: 1
   fullScreen: 1
   resolution: 0
   playerCameraFOV: 0

@@ -12,6 +12,7 @@ public class MenuUIActions : MonoBehaviour
     public void PlayButtonClick()
     {
         // Load game
+
     }
 
     public void SettingsButtonClick()
