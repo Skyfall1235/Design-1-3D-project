@@ -1411,6 +1411,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toggleActivity: 0
+  damageToPlayer: 0
+  shockDuration: 0
   objectSoundSource: {fileID: 0}
   particleSys: {fileID: 0}
   objectOscillates: 0
@@ -1984,6 +1986,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7810953356766172842, guid: 959edb39bb44bed4c9a593034e09cfe2,
+        type: 3}
+      propertyPath: audioFiles
+      value: 
+      objectReference: {fileID: 11400000, guid: 36ad240f444777140b476525e1a38e53,
+        type: 2}
+    - target: {fileID: 7810953356766172842, guid: 959edb39bb44bed4c9a593034e09cfe2,
+        type: 3}
+      propertyPath: settingsData
+      value: 
+      objectReference: {fileID: 11400000, guid: cef75e4f5a308ba4891bcdaab67c9dfe,
+        type: 2}
     - target: {fileID: 7810953356766172843, guid: 959edb39bb44bed4c9a593034e09cfe2,
         type: 3}
       propertyPath: screenTransObject

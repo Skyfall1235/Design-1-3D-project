@@ -1,35 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: AudioData
-  m_EditorClassIdentifier: Assembly-CSharp::SO_AudioFiles
-  soundFiles:
-  - collectionName: Menu Music
-    soundFile:
-    - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
-    - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
-    - {fileID: 8300000, guid: 47dff075376652140906b0b75e7acfb4, type: 3}
-  - collectionName: UI FX
-    soundFile:
-    - {fileID: 8300000, guid: 3cd5e833d3820c045af0995c3cf381dc, type: 3}
-    - {fileID: 8300000, guid: 45ffffc5bd6aea24aa82bd8eea5642c6, type: 3}
-  - collectionName: Player FX
-    soundFile:
-    - {fileID: 0}
-  - collectionName: Game Music
-    soundFile:
-    - {fileID: 0}
-  - collectionName: Ambience
-    soundFile:
-    - {fileID: 0}
-  - collectionName: extra
-    soundFile: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:e211d3f2adbba9fb605f13ccf81754769d1dd9077ab1b4849f6479c089216da7
+size 389
