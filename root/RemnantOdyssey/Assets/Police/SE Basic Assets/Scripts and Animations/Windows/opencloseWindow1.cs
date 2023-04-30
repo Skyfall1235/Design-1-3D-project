@@ -2,55 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class opencloseWindow1: MonoBehaviour {
+namespace SojaExiles
 
-	public Animator openandclosewindow1;
-	public bool open;
-	public Transform Player;
+{
+	public class opencloseWindow1 : MonoBehaviour
+	{
 
-	void Start (){
-		open = false;
-	}
+		public Animator openandclosewindow1;
+		public bool open;
+		public Transform Player;
 
-	void OnMouseOver (){
+		void Start()
 		{
-			if (Player) {
-				float dist = Vector3.Distance (Player.position, transform.position);
-				if (dist < 15) {
-					if (open == false) {
-						if (Input.GetMouseButtonDown (0)) {
-							StartCoroutine (opening ());
-						}
-					} else {
-						if (open == true) {
-							if (Input.GetMouseButtonDown (0)) {
-								StartCoroutine (closing ());
+			open = false;
+		}
+
+		void OnMouseOver()
+		{
+			{
+				if (Player)
+				{
+					float dist = Vector3.Distance(Player.position, transform.position);
+					if (dist < 15)
+					{
+						if (open == false)
+						{
+							if (Input.GetMouseButtonDown(0))
+							{
+								StartCoroutine(opening());
 							}
+						}
+						else
+						{
+							if (open == true)
+							{
+								if (Input.GetMouseButtonDown(0))
+								{
+									StartCoroutine(closing());
+								}
+							}
+
 						}
 
 					}
-
 				}
+
 			}
 
 		}
 
+		IEnumerator opening()
+		{
+			print("you are opening the Window");
+			openandclosewindow1.Play("Openingwindow 1");
+			open = true;
+			yield return new WaitForSeconds(.5f);
+		}
+
+		IEnumerator closing()
+		{
+			print("you are closing the Window");
+			openandclosewindow1.Play("Closingwindow 1");
+			open = false;
+			yield return new WaitForSeconds(.5f);
+		}
+
+
 	}
-
-	IEnumerator opening(){
-		print ("you are opening the Window");
-		openandclosewindow1.Play ("Openingwindow 1");
-		open = true;
-		yield return new WaitForSeconds (.5f);
-	}
-
-	IEnumerator closing(){
-		print ("you are closing the Window");
-		openandclosewindow1.Play ("Closingwindow 1");
-		open = false;
-		yield return new WaitForSeconds (.5f);
-	}
-
-
 }
-
