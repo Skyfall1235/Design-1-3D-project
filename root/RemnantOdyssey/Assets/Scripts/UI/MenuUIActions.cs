@@ -11,8 +11,7 @@ public class MenuUIActions : MonoBehaviour
     // Here to just hold all the button click info
     public void PlayButtonClick()
     {
-        // Load game
-
+        SceneManager.LoadScene(1);
     }
 
     public void SettingsButtonClick()
