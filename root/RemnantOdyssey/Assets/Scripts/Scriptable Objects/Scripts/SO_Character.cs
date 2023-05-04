@@ -13,6 +13,10 @@ public class SO_Character : ScriptableObject
     public int Defense;
     //if the object needs energy
     public int Energy;
+
+    public int EnergyMax;
     //the characters position
     public Vector3 Position;
+    //general state for all objects
+    public bool PoweredOn;
 }

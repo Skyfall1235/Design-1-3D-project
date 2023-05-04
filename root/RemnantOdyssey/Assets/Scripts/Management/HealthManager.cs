@@ -9,20 +9,20 @@ public class HealthManager
 
 
     //take damage method
-    private void TakeDamage(SO_Character charData, int DamageAmount)
+    public void TakeDamage(SO_Character charData, int DamageAmount)
     {
         charData.Health -= DamageAfterDefense(charData, DamageAmount);
     }
 
     //calculate defense from an attack
-    private int DamageAfterDefense(SO_Character charData, int DamageBeforeReduction)
+    public int DamageAfterDefense(SO_Character charData, int DamageBeforeReduction)
     {
         //return the
         return (DamageBeforeReduction * (charData.Defense / 100));  
     }
 
     //ability to heal
-    private int CalculateHeal(SO_Character CharData, int HealPercent)
+    public int CalculateHeal(SO_Character CharData, int HealPercent)
     {
         //for debugging
         int damageTaken = CharData.HealthMax - CharData.Health;
