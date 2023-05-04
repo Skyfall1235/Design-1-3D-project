@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerTextured Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3747920646738537553, guid: 9cd82a31e89f9484aac99e0b23e334ad,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3747920646738537554, guid: 9cd82a31e89f9484aac99e0b23e334ad,
         type: 3}
       propertyPath: m_RootOrder
