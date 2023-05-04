@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+[CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/Player/PlayerData")]
 public class SO_Player : SO_Character
 {
     //curent scene
@@ -35,11 +36,28 @@ public class SO_Player : SO_Character
         get => Energy;
         set => Energy = value;
     }
+    public int playerEnergyMax
+    {
+        get => EnergyMax;
+        set => EnergyMax = value;
+    }
 
     //the players position
     public Vector3 playerPosition
     {
         get => Position;
         set => Position = value;
+    }
+    public bool playerPowerOn
+    {
+        get => PoweredOn;
+        set => PoweredOn = value;
+    }
+
+    public void SetUpValues()
+    {
+        playerHealth = playerHealthMax;
+        playerEnergy = playerEnergyMax;
+        playerPowerOn = true;
     }
 }

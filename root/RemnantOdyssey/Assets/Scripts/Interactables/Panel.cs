@@ -13,23 +13,41 @@ public class Panel : MonoBehaviour
     [SerializeField] private GameObject panelObj;
     [SerializeField] private Material originalMat;
     [SerializeField] private Material highlightMat;
+    [SerializeField] private bool ableToBeInteracted;
+    [SerializeField] private GameObject gameManager;
+    private UIMenuControl menuControl;
+    [SerializeField] private GameObject interactable;
 
     private bool canInteract;
 
     void Start()
     {
+        gameManager = GameObject.FindWithTag("GameController");
+        menuControl = gameManager.GetComponent<UIMenuControl>();
         // should work as long as the player isn't spawned directly it the trigger
         canvas.GetComponent<Canvas>().enabled = false;
         panelObj.GetComponent<Renderer>().material = highlightMat;
         canInteract = false;
     }
+    public void Interact()
+    {
+        if(ableToBeInteracted && menuControl.isInteracting)
+        {
+            Debug.Log(menuControl.isInteracting);
+            Debug.Log("is doing action");
+            //display some prompt on the UI, and look for the 
+            DoAction();
+        }
+    }
 
     private void OnTriggerEnter(Collider obj)
     {
+        Interact();
         // if the obj is player:
         canvas.GetComponent<Canvas>().enabled = true;
         panelObj.GetComponent<Renderer>().material = originalMat;
-        canInteract = true;
+        ableToBeInteracted = true;
+
     }
 
     private void OnTriggerExit(Collider obj)
@@ -37,21 +55,21 @@ public class Panel : MonoBehaviour
         // if the obj is player:
         canvas.GetComponent<Canvas>().enabled = false;
         panelObj.GetComponent<Renderer>().material = highlightMat;
-        canInteract = false;
+        ableToBeInteracted = false;
     }
-
-    private void Interact()
+    private void DoAction()
     {
-        print("Player has interacted with object");
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && canInteract)
+        Debug.Log("is doing action");
+        MagneticWall2 magneticWall = interactable.GetComponent<MagneticWall2>();
+        //only turns it off its if on
+        Debug.Log((magneticWall != null, magneticWall.PowerStateOn));
+        if (magneticWall != null && magneticWall.PowerStateOn)
         {
-            Interact();
-        } else if (Input.GetKeyDown(KeyCode.E) && canInteract == false) {
-            print("Player is not close enough to interact");
+            // toggle the PowerStateOn variable
+            magneticWall.PowerStateOn = !magneticWall.PowerStateOn;
+            return;
         }
+        Debug.Log("didnt find a script");
+
     }
 }

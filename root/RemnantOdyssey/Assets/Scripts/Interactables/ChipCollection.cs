@@ -14,13 +14,13 @@ public class ChipCollection : MonoBehaviour
     {
         firstLine.SetActive(true);
         secondLine.SetActive(false);
-        transform.SetActive(true)
+        transform.gameObject.SetActive(true);
     }
 
     void OnTriggerEnter()
     {
         firstLine.SetActive(false);
         secondLine.SetActive(true);
-        transform.SetActive(false);
+        transform.gameObject.SetActive(false);
     }
 }
