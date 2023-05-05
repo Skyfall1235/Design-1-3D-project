@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -904,9 +904,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.467758, y: -58.000294, z: 580.1399}
+    m_Target: {x: 9.740081, y: 0.5524693, z: 15.2879505}
     speed: 2
-    m_Value: {x: -10.467758, y: -58.000294, z: 580.1399}
+    m_Value: {x: 9.740081, y: 0.5524693, z: 15.2879505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -952,13 +952,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.14001656, y: -0.82319427, z: 0.4995075, w: 0.2307495}
+    m_Target: {x: 0.11157138, y: -0.19787522, z: 0.02230294, w: 0.9737443}
     speed: 2
-    m_Value: {x: 0.13926668, y: -0.8235369, z: 0.49971536, w: 0.2295137}
+    m_Value: {x: 0.11158919, y: -0.19638708, z: 0.022132482, w: 0.9739046}
   m_Size:
-    m_Target: 334.59564
+    m_Target: 7.033627
     speed: 2
-    m_Value: 334.59564
+    m_Value: 6.197028
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1037,9 +1037,9 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: 96
-  m_LastProjectPath: C:\Users\Flynn\Documents\SGD112Archive\Design1-3D-Project\Design-1-3D-project\root\RemnantOdyssey
+  m_LastProjectPath: D:\GithubUnity\Design-1-3D-project\root\RemnantOdyssey
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:

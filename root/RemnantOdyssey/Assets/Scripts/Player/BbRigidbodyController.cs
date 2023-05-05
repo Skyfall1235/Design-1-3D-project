@@ -22,6 +22,8 @@ public class BbRigidbodyController : MonoBehaviour
 
     public Rigidbody Head;
 
+    public GameObject container;
+
     [Tooltip("Scale torque by this value")]
     public float TorqueScale = 0.3f;
 
@@ -50,6 +52,7 @@ public class BbRigidbodyController : MonoBehaviour
     void LateUpdate()
     {
         Head.transform.position = transform.position;
+        container.transform.position = gameObject.transform.position;
     }
 
     void Update()

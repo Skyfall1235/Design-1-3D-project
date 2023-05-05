@@ -17,6 +17,7 @@ public class UIMenuControl : MonoBehaviour
     [SerializeField] private bool mapOpen;
     [SerializeField] private bool pauseMenuOpen;
     [SerializeField] private bool interactionMenuOpen;
+    public bool isInteracting;
     [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject interactionPanel;
@@ -43,6 +44,13 @@ public class UIMenuControl : MonoBehaviour
             interactionMenuOpen = !interactionMenuOpen;
             InteractionMenu(interactionMenuOpen);
         }
+        //shows the bool while the player presses the button
+        //which is pubvlic to allow object to know the player is interacting with an objecy
+        if(Input.GetKeyDown(interactionMenuKey))
+        {
+            isInteracting = !isInteracting;
+        }
+
     }
     #region Menu UI
     void Start()
@@ -100,7 +108,7 @@ public class UIMenuControl : MonoBehaviour
         // Code to handle the interaction menu UI
         if (toggle)
         {
-
+            //show all objects that can bew interactable in the range?
         }
         else
         {

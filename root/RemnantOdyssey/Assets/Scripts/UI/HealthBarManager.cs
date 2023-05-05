@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBarManager : MonoBehaviour
 {
+    [SerializeField] private SO_Player playerData;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Slider energySlider;
     [SerializeField] private Image healthFill;
@@ -19,6 +20,7 @@ public class HealthBarManager : MonoBehaviour
     [SerializeField] private int functEnergy;
     [SerializeField] private int functEnergyMax;
 
+    
     // For in game health over enemies, change canvas to World Spcae in render mode and resize the canvas over the enemy
     public void SetMaxStat(Slider slider, Image fill, int stat, Gradient gradient)
     {
@@ -43,11 +45,18 @@ public class HealthBarManager : MonoBehaviour
             powerIndicator.color = new Color(1f, 0.4f, 0.35f, 1f);
         }
     }
+    private void UpdateFuncts()
+    {
+        functHealth = playerData.playerHealth;
+        functEnergy = playerData.playerEnergy;
+    }
 
     void Start()
     {
         SetMaxStat(healthSlider, healthFill, functMaxHealth, healthGradient);
         SetMaxStat(energySlider, energyFill, functEnergyMax, energyGradient);
+        functMaxHealth = playerData.playerHealthMax;
+        functEnergyMax = playerData.playerEnergyMax;
         functHealth = functMaxHealth;
         functEnergy = functEnergyMax;
 
@@ -56,6 +65,9 @@ public class HealthBarManager : MonoBehaviour
 
     void Update()
     {
+
+        UpdateFuncts();
+        //for testing
         if (Input.GetKeyDown(KeyCode.J))
         {
             functHealth -= 1;
@@ -88,6 +100,15 @@ public class HealthBarManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.I))
         {
             OnOffIndicator(true);
+        }
+        //links to the player data
+        if (playerData.playerPowerOn)
+        {
+            OnOffIndicator(true);
+        }
+        else
+        {
+            OnOffIndicator(false);
         }
     }
 }
