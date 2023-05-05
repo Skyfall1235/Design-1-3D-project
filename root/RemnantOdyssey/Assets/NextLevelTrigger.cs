@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextLevelTrigger : MonoBehaviour
-{ 
-
+{
     private void OnTriggerEnter(Collider obj)
     {
         if (obj.gameObject.CompareTag("Player"))
@@ -14,18 +13,13 @@ public class NextLevelTrigger : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
+            if(SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                SceneManager.LoadScene(3);
+            }
             if (SceneManager.GetActiveScene().buildIndex == 3)
             {
-                SceneManager.LoadScene(2);
-            }
-            if (SceneManager.GetActiveScene().buildIndex == 2)
-            {
-                if (toPolice)
-                {
-                    SceneManager.LoadScene(3);
-                } else {
-                    SceneManager.LoadScene(4);
-                }
+                SceneManager.LoadScene(4);
             }
             if (SceneManager.GetActiveScene().buildIndex == 4)
             {

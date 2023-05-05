@@ -341,7 +341,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.17254902, g: 0.20784315, b: 0.20392159, a: 0}
+  m_BackGroundColor: {r: 0.18039216, g: 0.21568629, b: 0.20392159, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -644,10 +644,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My Son! You found us!
+  m_text: 'My Son! You found us!
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9678e75788a137348b032a9319cc0b88, type: 2}
+  m_sharedMaterial: {fileID: -1963994743633051841, guid: 9678e75788a137348b032a9319cc0b88,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -978,8 +981,9 @@ MonoBehaviour:
     from the evil robots! I'm so glad I continued to create you, I knew you wouldn't
     turn like the others. You were made to be good, and you were great!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9678e75788a137348b032a9319cc0b88, type: 2}
+  m_sharedMaterial: {fileID: -1963994743633051841, guid: 9678e75788a137348b032a9319cc0b88,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1003,8 +1007,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
