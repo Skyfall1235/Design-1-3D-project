@@ -19,13 +19,27 @@ public class MagneticWall2 : MonoBehaviour
     [SerializeField] GameObject warningPanel;
     [SerializeField] GameObject welcomePanel;
 
+    Material material1;
+    public Material material2;
+    float duration = 2.0f;
+    Renderer rend;
     private void Update()
     {
+        if(PowerStateOn)
+        {
+            return;
+        }
+        // ping-pong between the materials over the duration
+        float lerp = Mathf.PingPong(Time.time, duration) / duration;
+        rend.material.Lerp(material1, material2, lerp);
 
     }
     private void Start()
     {
         pushbackDirection = transform.forward;
+        rend = GetComponent<Renderer>();
+        // At start, use the first material
+        rend.material = material1;
     }
 
     private IEnumerator Pushback(GameObject player)
@@ -37,6 +51,7 @@ public class MagneticWall2 : MonoBehaviour
             playerRB.AddForce(force);
             yield return null;
         }
+
     }
     private IEnumerator DisplayDoorPanelWarning(float timeToDisplay)
     {
