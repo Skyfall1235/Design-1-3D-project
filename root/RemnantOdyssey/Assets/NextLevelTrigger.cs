@@ -21,10 +21,6 @@ public class NextLevelTrigger : MonoBehaviour
             {
                 SceneManager.LoadScene(4);
             }
-            if (SceneManager.GetActiveScene().buildIndex == 4)
-            {
-                SceneManager.LoadScene(5);
-            }
         }
     }
 }
