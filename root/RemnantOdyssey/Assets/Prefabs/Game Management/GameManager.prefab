@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 7810953356766172845}
   - component: {fileID: 7810953356766172842}
   - component: {fileID: 7810953356766172843}
+  - component: {fileID: 2393406558543517602}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -521,6 +522,28 @@ MonoBehaviour:
   visibleSceneName: {fileID: 5242578885240348817}
   visibleSceneDescription: {fileID: 1808555351889181326}
   visibleTransitionImage: {fileID: 394604280865582264}
+--- !u!114 &2393406558543517602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810953356766172840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce16bfa8b19d76f4a967643040992797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionMenuKey: 32
+  pauseKey: 0
+  mapKey: 109
+  mapOpen: 0
+  pauseMenuOpen: 0
+  interactionMenuOpen: 0
+  isInteracting: 0
+  mapPanel: {fileID: 0}
+  pausePanel: {fileID: 0}
+  interactionPanel: {fileID: 0}
 --- !u!1 &8251554072988794232
 GameObject:
   m_ObjectHideFlags: 0

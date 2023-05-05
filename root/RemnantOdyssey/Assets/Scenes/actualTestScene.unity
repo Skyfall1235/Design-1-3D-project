@@ -529,28 +529,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &970076021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 226491615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce16bfa8b19d76f4a967643040992797, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionMenuKey: 32
-  pauseKey: 0
-  mapKey: 109
-  mapOpen: 0
-  pauseMenuOpen: 0
-  interactionMenuOpen: 0
-  isInteracting: 0
-  mapPanel: {fileID: 691705407}
-  pausePanel: {fileID: 0}
-  interactionPanel: {fileID: 0}
 --- !u!1 &974125664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +1657,11 @@ PrefabInstance:
       propertyPath: m_margin.x
       value: 30.26632
       objectReference: {fileID: 0}
+    - target: {fileID: 2393406558543517602, guid: 959edb39bb44bed4c9a593034e09cfe2,
+        type: 3}
+      propertyPath: mapPanel
+      value: 
+      objectReference: {fileID: 691705407}
     - target: {fileID: 2478437505603608282, guid: 959edb39bb44bed4c9a593034e09cfe2,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1898,10 +1881,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1724947377}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7810953356766172840, guid: 959edb39bb44bed4c9a593034e09cfe2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 970076021}
     - targetCorrespondingSourceObject: {fileID: 6367517861914307808, guid: 959edb39bb44bed4c9a593034e09cfe2,
         type: 3}
       insertIndex: -1

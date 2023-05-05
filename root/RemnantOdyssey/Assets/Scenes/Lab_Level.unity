@@ -1828,6 +1828,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2157832198180250023, guid: 13232cab86d2ad94e836bafee5bc7af4,
+        type: 3}
+      propertyPath: material2
+      value: 
+      objectReference: {fileID: 2100000, guid: a66b56c87a97ec54184da320cfd93ae8, type: 2}
     - target: {fileID: 2157832198993206395, guid: 13232cab86d2ad94e836bafee5bc7af4,
         type: 3}
       propertyPath: m_fontAsset
@@ -6953,6 +6958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7810953356766172840, guid: 959edb39bb44bed4c9a593034e09cfe2,
+        type: 3}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 7810953356766172845, guid: 959edb39bb44bed4c9a593034e09cfe2,
         type: 3}
